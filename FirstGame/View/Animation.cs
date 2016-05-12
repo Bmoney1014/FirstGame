@@ -12,30 +12,46 @@ namespace FirstGame
 			Texture2D spriteStrip;
 
 			// The scale used to display the sprite strip
-			public float Scale;
+			public float Scale
 			{
 				get { return Scale; }
-				set { 
+				set { Scale = value; }
 			}
 			// The time since we last updated the frame
-			private int elapsedTime;
-
+			private int elapsedTime
+			public int elapsedTime
+			{
+				get{return elapsedTime;}
+				set{elapsedTime = value;}
+			}
 			// The time we display a frame until the next one
-			private int frameTime;
-
+			private int frameTime
+			public int FrameTime
+			{
+				get{return FrameTime}
+				set{FrameTime = value; }
+			}
 			// The number of frames that the animation contains
-			private int frameCount;
-
+			private int frameCount
+			public int frameCount
+			{
+				get{return frameCount;}
+				set{frameCount = value;}
+			}
 			// The index of the current frame we are displaying
-			private int currentFrame;
-
+			private int currentFrame
+			public int currentFrame
+			{
+				get{return currentFrame;
+				set{currentFrame = value;}
+			}
 			// The color of the frame we will be displaying
-			private Color color;
-
-				public Color Color
-				{
-
-
+			private Color color
+			public Color Color
+			{
+				get { return Color;}
+				set { Color = value;}
+			}
 			// The area of the image strip we want to display
 			Rectangle sourceRect = new Rectangle();
 
@@ -44,7 +60,6 @@ namespace FirstGame
 
 			// Width of a given frame
 			private int FrameWidth;
-
 			public int frameWidth
 			{
 				get { return frameWidth; }
@@ -53,16 +68,32 @@ namespace FirstGame
 
 			// Height of a given frame
 			private int FrameHeight;
-
+			public int FrameHeight
+			{
+				get{return FrameHeight;}
+				set{FrameHeight = value;}
+			}
 			// The state of the Animation
 			private bool Active;
-
+			public bool Active
+			{
+				get{return Active;}
+				set{Active = value;}
+			}
 			// Determines if the animation will keep playing or deactivate after one run
 			private bool Looping;
-
+			public bool Looping
+			{
+				get{return Looping;}
+				set{Looping = value;}
+			}
 			// Width of a given frame
 			private Vector2 Position;
-
+			public Vector2 position
+			{
+				get{return Vector2;}
+				set{Vector2 = value;}
+			}
 			public void Initialize(Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount, int frametime, Color color, float scale, bool looping)
 			{
 				// Keep a local copy of the values passed in
@@ -135,5 +166,4 @@ namespace FirstGame
 			}
 		}
 	}
-}
 
